@@ -1,0 +1,34 @@
+{
+  "type": "AdaptiveCard",
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.5",
+  "body": [
+    { "type": "TextBlock", "text": "${title}", "weight": "Bolder", "size": "Medium" },
+    { "type": "TextBlock", "text": "${subtitle}", "isSubtle": true, "spacing": "None", "wrap": true },
+    {
+      "type": "Container",
+      "spacing": "Medium",
+      "$data": "${bills}",
+      "items": [
+        {
+          "type": "ColumnSet",
+          "columns": [
+            {
+              "type": "Column",
+              "width": "stretch",
+              "items": [
+                { "type": "TextBlock", "text": "${name}", "weight": "Bolder", "wrap": false },
+                { "type": "TextBlock", "text": "${when}", "isSubtle": true, "spacing": "None", "size": "Small", "color": "${if(late, 'Attention', 'Default')}" }
+              ]
+            },
+            { "type": "Column", "width": "auto", "verticalContentAlignment": "Center", "items": [{ "type": "TextBlock", "text": "${amount}" }] }
+          ]
+        }
+      ]
+    }
+  ],
+  "actions": [
+    { "type": "Action.Execute", "title": "Mark ${nextName} paid", "verb": "pay-next", "$when": "${hasNext}" },
+    { "type": "Action.Execute", "title": "Open Billstub", "verb": "open" }
+  ]
+}

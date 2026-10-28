@@ -1,0 +1,153 @@
+{
+  "id": "/billstub/app/",
+  "name": "Billstub",
+  "short_name": "Billstub",
+  "description": "A calm bill due-date tracker for Windows. See what is due next, mark bills paid, and keep everything on this PC.",
+  "lang": "en-US",
+  "dir": "ltr",
+  "start_url": "/billstub/app/",
+  "scope": "/billstub/app/",
+  "display": "standalone",
+  "display_override": [
+    "window-controls-overlay",
+    "standalone"
+  ],
+  "orientation": "any",
+  "theme_color": "#233a5b",
+  "background_color": "#eef0f4",
+  "categories": [
+    "finance",
+    "productivity",
+    "utilities"
+  ],
+  "icons": [
+    {
+      "src": "icons/icon-16.png",
+      "sizes": "16x16",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-20.png",
+      "sizes": "20x20",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-24.png",
+      "sizes": "24x24",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-40.png",
+      "sizes": "40x40",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-48.png",
+      "sizes": "48x48",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-64.png",
+      "sizes": "64x64",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-256.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "New bill",
+      "short_name": "New bill",
+      "url": "/billstub/app/?new",
+      "icons": [
+        {
+          "src": "icons/icon-96.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "widgets": [
+    {
+      "name": "Billstub: Next bills",
+      "short_name": "Next bills",
+      "description": "Your next bills, when they are due, and how much.",
+      "tag": "next-bills",
+      "template": "billstub-next-bills",
+      "ms_ac_template": "widgets/next-bills.ac.json",
+      "data": "widgets/next-bills-data.json",
+      "type": "application/json",
+      "screenshots": [
+        {
+          "src": "widgets/screenshot-next-bills.png",
+          "sizes": "600x400",
+          "label": "The Next bills widget"
+        }
+      ],
+      "icons": [
+        {
+          "src": "icons/icon-48.png",
+          "sizes": "48x48"
+        }
+      ],
+      "auth": false,
+      "update": 21600,
+      "multiple": false
+    }
+  ],
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  }
+}
